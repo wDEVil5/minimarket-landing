@@ -1,0 +1,55 @@
+/* variables: se definen una sola vez, se usan en todos lados */
+:root {
+    --color-principal: #2563eb;
+    --color-oscuro: #1e3a8a;
+    --color-fondo-claro: #f8fafc;
+    --color-texto: #334155;
+    --color-blanco: #ffffff;
+}
+
+/* Reset basico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos base del cuerpo */
+
+body {
+    font-family: system-ui, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    line-height: 1.6;
+}
+
+/* contenedor : centra el contenido y limita el ancho */
+header,
+main,
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* espaciado entre secciones */
+section {
+    padding: 3rem 0;
+
+}
+
+/* titulos en azul oscuro */
+h1, h2 {
+    color: var(--color-oscuro);
+    margin-bottom: 1rem;
+
+}
+
+/* enlaces del menu */
+nav a {
+    color: var(--color-principal);
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 600;
+}
