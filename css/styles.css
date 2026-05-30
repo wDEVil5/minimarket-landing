@@ -88,3 +88,41 @@ nav a {
 .boton:hover {
     background-color: var(--color-oscuro);
 }
+
+/* cuadricula de producto */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+
+}
+
+/* tarjeta de producto */
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta h3 {
+    color: var(--color-oscuro);
+    margin-bottom: 0.5rem;
+
+}
+
+.precio {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    font-size: 1.1rem;
+}
