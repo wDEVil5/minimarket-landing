@@ -82,7 +82,7 @@ nav a {
    border-radius: 0.5rem;
    text-decoration: none;
    font-weight: 600;
-   transition: background-color 0.4s ease;
+   transition: all 0.3s ease;
 }
 
 .boton:hover {
@@ -90,7 +90,8 @@ nav a {
 }
 
 /* cuadricula de producto */
-.grid-productos {
+.grid-productos,
+.grid-eleccion {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
@@ -125,4 +126,36 @@ nav a {
     font-weight: 700;
     color: var(--color-principal);
     font-size: 1.1rem;
+}
+
+/* Oferta */
+.oferta-destacada {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+}
+
+.oferta-destacada h2 {
+    color: var(--color-blanco);
+    font-size: 2rem;
+
+}
+
+.oferta-destacada p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+} 
+
+/* variante de boton para fondos oscuros */
+
+.boton-claro {
+    background-color: var(--color-blanco);
+    color: var(--color-principal);
+}
+
+.boton-claro:hover {
+    background-color: var(--color-fondo-claro);
+    transform: translateY(-2px);
 }
