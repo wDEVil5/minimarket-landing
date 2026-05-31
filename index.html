@@ -99,14 +99,30 @@
           </div>
         
           <div class="ubicacion-mapa">
-            <p>aqui va una mapa real de google</p>
+            <p>aqui va un mapa real de google</p>
           </div>
         </div>
       </section>
+      
+      <section class="contacto" id="contacto">
+        <h2>Solicita tu cotizacion</h2>
+        <p>dejanos su contacto y le contactaremos a la brevedad.</p>
 
-      <section>
-        <h2>contacto</h2>
-        <p>aqui van los diferentes maneras en las que nos pueden contactar</p>
+        <form class="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo"/>
+
+          <label for="correo"> Correo electronico</label>
+          <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com"/>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678"/>
+
+          <label for="mensaje">¿Que desea cotizar?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué productos o cantidades necesitas"></textarea>
+
+          <button type="submit" class="boton">Enviar solicitud</button>
+        </form>
       </section>
     </main>
 
