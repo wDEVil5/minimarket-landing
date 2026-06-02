@@ -245,3 +245,23 @@ nav a {
     cursor: pointer;
     align-self: flex-start;
 }
+
+/* Responsive: mobile */
+
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+    }
+
+    nav a {
+        margin-right: 0;
+    }
+
+    /* La ubicacion pasa de 2 columnas a 1 en mobil */
+    .ubicacion-grid {
+        grid-template-columns: 1fr;
+    }
+}
