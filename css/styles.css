@@ -78,7 +78,7 @@ nav a {
 
 /* uso clamp para adaptar el texto en la pantalla */
 .hero h1 {
-    font-size: clamp(1.8rem, 5vm, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .hero p {
@@ -96,7 +96,7 @@ nav a {
    border-radius: 0.5rem;
    text-decoration: none;
    font-weight: 600;
-   transition: all 0.3s ease;
+   transition: all 0.4s ease;
 }
 
 .boton:hover {
@@ -247,6 +247,17 @@ nav a {
     align-self: flex-start;
 }
 
+/* boton hamburguesa (oculto en escritorio) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    cursor: pointer;
+
+}
+
 /* Responsive: movil */
 
 @media (max-width: 600px) {
@@ -254,15 +265,32 @@ nav a {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-
     }
 
     nav a {
         margin-right: 0;
     }
 
-    /* La ubicacion pasa de 2 columnas a 1 en mobil */
+    /* La ubicacion pasa de 2 columnas a 1 en movil */
     .ubicacion-grid {
         grid-template-columns: 1fr;
     }
+
+    /* El boton hamburguesa aparece en movil */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* los enlaces empiezan ocultos en movil */
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links.activo {
+        display: flex; /* cuando tenga la clase "activo" se muestran */
+    }
 }
+
+
