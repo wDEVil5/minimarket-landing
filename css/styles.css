@@ -18,7 +18,7 @@
 /* estilos base del cuerpo */
 
 body {
-    font-family: system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif; /* inter (prioridad) para el cuerpo [APLICANDO FONT STACK]*/
     color: var(--color-texto);
     background-color: var(--color-blanco);
     line-height: 1.6;
@@ -57,6 +57,10 @@ h1, h2 {
     color: var(--color-oscuro);
     margin-bottom: 1rem;
 
+}
+
+h1, h2, h3 {
+    font-family: "Poppins" sans-serif; /* Poppins para títulos  [APLICANDO FONT STACK] */
 }
 
 /* enlaces del menu */
@@ -269,6 +273,11 @@ nav a {
 .aparece.visible {
     opacity: 1; /* la hace visible */
     transform: translateY(0);
+}
+
+/* suavidad al saltar secciones */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Responsive: movil */
