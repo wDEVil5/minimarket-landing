@@ -127,7 +127,7 @@ nav a {
   background-color: var(--color-principal);
   color: var(--color-blanco);
   padding: 0.9rem 2rem;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 600;
@@ -194,6 +194,7 @@ nav a {
 .oferta-destacada p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* variante de boton para fondos oscuros */
@@ -303,6 +304,48 @@ nav a {
 /* suavidad al saltar secciones */
 html {
   scroll-behavior: smooth;
+}
+
+/* ===== Carrusel infinito ===== */
+.carrusel {
+  overflow: hidden;       /* oculta lo que se sale de la ventana */
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.carrusel-pista {
+  display: flex;
+  gap: 1rem;
+  width: max-content;     /* la pista es tan ancha como sus items */
+  animation: desplazar 25s linear infinite;
+}
+
+.carrusel-item {
+  flex-shrink: 0;         /* las tarjetas no se encogen */
+  width: 280px; /* ancho de la tarjeta */
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 200px; /* altura de la tarjeta */
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* La animación: mueve la pista hacia la izquierda */
+@keyframes desplazar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa al pasar el mouse */
+.carrusel:hover .carrusel-pista {
+  animation-play-state: none; /* para activar esa funcion usar : ( paused ) */
 }
 
 /* Responsive: movil */
