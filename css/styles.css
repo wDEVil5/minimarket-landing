@@ -1,330 +1,341 @@
 /* variables: se definen una sola vez, se usan en todos lados */
 :root {
-    --color-principal: #2563eb;
-    --color-oscuro: #1e3a8a;
-    --color-fondo-claro: #f8fafc;
-    --color-texto: #334155;
-    --color-blanco: #ffffff;
+  --color-principal: #2563eb;
+  --color-oscuro: #1e3a8a;
+  --color-fondo-claro: #f8fafc;
+  --color-texto: #334155;
+  --color-blanco: #ffffff;
 }
 
 /* Reset basico */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* estilos base del cuerpo */
 
 body {
-    font-family: "Inter", system-ui, sans-serif; /* inter (prioridad) para el cuerpo [APLICANDO FONT STACK]*/
-    color: var(--color-texto);
-    background-color: var(--color-blanco);
-    line-height: 1.6;
+  font-family:
+    "Inter", system-ui, sans-serif; /* inter (prioridad) para el cuerpo [APLICANDO FONT STACK]*/
+  color: var(--color-texto);
+  background-color: var(--color-blanco);
+  line-height: 1.6;
 }
 
-
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* Contenedor interno: centra y limita el contenido */
 .contenedor {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 header {
-    background-color: var(--color-blanco);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: sticky; /* mantiene fijo la barra de navegacion */
-    top: 0;
-    z-index: 100;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  background-color: var(--color-blanco);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky; /* mantiene fijo la barra de navegacion */
+  top: 0;
+  z-index: 100;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer {
-    background-color: var(--color-oscuro);
-    color: var(--color-blanco);
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  background-color: var(--color-oscuro);
+  color: var(--color-blanco);
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-
 
 /* espaciado entre secciones */
 section {
-    padding: 3rem 0;
-
+  padding: 3rem 0;
 }
 
 /* titulos en azul oscuro */
-h1, h2 {
-    color: var(--color-oscuro);
-    margin-bottom: 1rem;
-
+h1,
+h2 {
+  color: var(--color-oscuro);
+  margin-bottom: 1rem;
 }
 
-h1, h2, h3 {
-    font-family: "Poppins" sans-serif; /* Poppins para títulos  [APLICANDO FONT STACK] */
+h1,
+h2,
+h3 {
+  font-family: "Poppins" sans-serif; /* Poppins para títulos  [APLICANDO FONT STACK] */
 }
 
 /* enlaces del menu */
 nav a {
-    color: var(--color-principal);
-    text-decoration: none;
-    margin-right: 1.5rem;
-    font-weight: 600;
+  color: var(--color-principal);
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 600;
 }
 
 /* hero */
 .hero {
-    background-color: var(--color-fondo-claro);
-    text-align: center;
-    padding: 5rem 1.5rem;
-    border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 6rem 1.5rem;
+  border-radius: 1rem;
+}
 
+.hero-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.7px) brightness(0.35);
+  z-index: -1;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  color: var(--color-blanco);
 }
 
 /* uso clamp para adaptar el texto en la pantalla */
 .hero h1 {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: var(--color-blanco);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+  font-size: 1.2rem;
+  margin: 2rem;
+  color: var(--color-blanco);
 }
 
 /* boton (CTA) */
 .boton {
-   display: inline-block;
-   background-color: var(--color-principal);
-   color: var(--color-blanco);
-   padding: 0.9rem 2rem;
-   margin-top: 2rem;
-   border-radius: 0.5rem;
-   text-decoration: none;
-   font-weight: 600;
-   transition: all 0.5s ease; /* suavidad de los botones */
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 0.9rem 2rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.5s ease; /* suavidad de los botones */
 }
 
 .boton:hover {
-    background-color: var(--color-oscuro);
+  background-color: var(--color-oscuro);
 }
 
 /* cuadricula de producto */
 .grid-productos,
 .grid-eleccion {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 /* tarjeta de producto */
 
 .tarjeta {
-    background-color: var(--color-blanco);
-    border: 1px solid #e2e8f0;
-    border-radius: 0.75rem;
-    padding: 1.5rem; 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--color-blanco);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .tarjeta h3 {
-    color: var(--color-oscuro);
-    margin-bottom: 0.5rem;
-
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
 }
 
 .precio {
-    display: block;
-    margin-top: 1rem;
-    font-weight: 700;
-    color: var(--color-principal);
-    font-size: 1.1rem;
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--color-principal);
+  font-size: 1.1rem;
 }
 
 /* Oferta */
 .oferta-destacada {
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
-    text-align: center;
-    padding: 3rem 2rem;
-    border-radius: 1rem;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
 }
 
 .oferta-destacada h2 {
-    color: var(--color-blanco);
-    font-size: 2rem;
-
+  color: var(--color-blanco);
+  font-size: 2rem;
 }
 
 .oferta-destacada p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-} 
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
 
 /* variante de boton para fondos oscuros */
 
 .boton-claro {
-    background-color: var(--color-blanco);
-    color: var(--color-principal);
+  background-color: var(--color-blanco);
+  color: var(--color-principal);
 }
 
 .boton-claro:hover {
-    background-color: var(--color-fondo-claro);
-    transform: translateY(-2px);
+  background-color: var(--color-fondo-claro);
+  transform: translateY(-2px);
 }
 
 /* ubicacion: dos columnas */
 
 .ubicacion-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .ubicacion-info h3 {
-    color: var(--color-oscuro);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-
+  color: var(--color-oscuro);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ubicacion-info h3:first-child {
-    margin-top: 0;
-
+  margin-top: 0;
 }
 
 .ubicacion-mapa {
-    background-color: var(--color-fondo-claro);
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 250px;
-    color: var(--color-texto);
+  background-color: var(--color-fondo-claro);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  color: var(--color-texto);
 }
 
 /* formulario */
 
 .formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    max-width: 500px;
-    margin-top: 2rem;
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin-top: 2rem;
 }
 
 .formulario label {
-    font-weight: 600;
-    color: var(--color-oscuro);
-    margin-top: 1rem;
-
+  font-weight: 600;
+  color: var(--color-oscuro);
+  margin-top: 1rem;
 }
 
 .formulario input,
 .formulario textarea {
-    padding: 0.8rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 0.5rem;
-    font-family: inherit;
-    font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
-.formulario input:focus, 
+.formulario input:focus,
 .formulario textarea:focus {
-    outline: none;
-    border-color: var(--color-principal);
-
+  outline: none;
+  border-color: var(--color-principal);
 }
 
 .formulario button {
-    margin-top: 1.5rem;
-    border: none;
-    cursor: pointer;
-    align-self: flex-start;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
 }
 
 /* boton hamburguesa (oculto en escritorio) */
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--color-principal);
-    cursor: pointer;
-
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--color-principal);
+  cursor: pointer;
 }
 
 /* animacion de aparicion al hacer click */
 
 .aparece {
-    opacity: 0; /* la hace invisible */
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0; /* la hace invisible */
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .aparece.visible {
-    opacity: 1; /* la hace visible */
-    transform: translateY(0);
+  opacity: 1; /* la hace visible */
+  transform: translateY(0);
 }
 
 /* suavidad al saltar secciones */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Responsive: movil */
 
 @media (max-width: 600px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    nav a {
-        margin-right: 0;
-    }
+  nav a {
+    margin-right: 0;
+  }
 
-    /* La ubicacion pasa de 2 columnas a 1 en movil */
-    .ubicacion-grid {
-        grid-template-columns: 1fr;
-    }
+  /* La ubicacion pasa de 2 columnas a 1 en movil */
+  .ubicacion-grid {
+    grid-template-columns: 1fr;
+  }
 
-    /* El boton hamburguesa aparece en movil */
-    .menu-toggle {
-        display: block;
-    }
+  /* El boton hamburguesa aparece en movil */
+  .menu-toggle {
+    display: block;
+  }
 
-    .nav-links {
-        display: none; /* los enlaces empiezan ocultos en movil */
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
+  .nav-links {
+    display: none; /* los enlaces empiezan ocultos en movil */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
 
-    .nav-links.activo {
-        display: flex; /* cuando tenga la clase "activo" se muestran */
-    }
+  .nav-links.activo {
+    display: flex; /* cuando tenga la clase "activo" se muestran */
+  }
 }
-
-
