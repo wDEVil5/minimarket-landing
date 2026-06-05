@@ -96,7 +96,7 @@ nav a {
    border-radius: 0.5rem;
    text-decoration: none;
    font-weight: 600;
-   transition: all 0.4s ease;
+   transition: all 0.5s ease; /* suavidad de los botones */
 }
 
 .boton:hover {
@@ -256,6 +256,19 @@ nav a {
     color: var(--color-principal);
     cursor: pointer;
 
+}
+
+/* animacion de aparicion al hacer click */
+
+.aparece {
+    opacity: 0; /* la hace invisible */
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.aparece.visible {
+    opacity: 1; /* la hace visible */
+    transform: translateY(0);
 }
 
 /* Responsive: movil */

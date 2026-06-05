@@ -47,3 +47,22 @@ formulario.addEventListener("submit", function (event) {
     formulario.reset();
 
 });
+
+//animacion al hacer scroll
+
+//agarramos las secciones con la clase "aparece"
+const secciones = document.querySelectorAll(".aparece");
+
+//crear el observador que vigila cuando entran en pantalla
+const observador = new IntersectionObserver(function(entradas) {
+    entradas.forEach(function(entrada) {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add("visible");
+        }    
+    });
+});
+
+//se le dice al observador que vigile cada seccion
+secciones.forEach(function(seccion) {
+    observador.observe(seccion);
+});
