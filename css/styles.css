@@ -25,26 +25,38 @@ body {
 }
 
 
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
 
-/* contenedor : centra el contenido y limita el ancho */
-header,
-main,
-footer {
+/* Contenedor interno: centra y limita el contenido */
+.contenedor {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 header {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky; /* mantiene fijo la barra de navegacion */
+    top: 0;
+    z-index: 100;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 3rem;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
+
 
 /* espaciado entre secciones */
 section {
