@@ -20,7 +20,7 @@ Como estudiante de Ingeniería en Computación e Informática, desarrollé este 
 - Diseño totalmente **responsive** (móvil, tablet y escritorio)
 - **Menú hamburguesa** funcional para dispositivos móviles
 - Sección de productos en cuadrícula adaptable
-- **Carrusel infinito** de productos con pausa al pasar el mouse
+- **Carrusel infinito** de productos
 - Bloque de ofertas destacadas
 - Sección de ubicación y horarios
 - **Formulario de cotización** con validación de campos

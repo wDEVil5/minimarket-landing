@@ -16,7 +16,7 @@ boton.addEventListener("click", function() {
 const formulario = document.querySelector(".formulario");
 
 //escuchamos el evento del submit
-formulario.addEventListener("submit", function (event) {
+formulario.addEventListener("submit", async function (event) {
     //evitamos que la pagina se recargue
     event.preventDefault();
 
@@ -28,23 +28,37 @@ formulario.addEventListener("submit", function (event) {
 
     //validaciones
     if (nombre === "") {
-        alert ("porfavor, escribe tu nombre");
+        alert("Por favor, escribe tu nombre.");
         return;
     }
 
     if (!correo.includes("@") || !correo.includes(".")) {
-        alert("porfavor escribe un coreo valido.");
+        alert("Por favor, escribe un correo válido.");
         return;
     }
 
     if (mensaje.length < 10) {
-        alert("cuentanos un poco mas sobre lo que necesitas (minino 10 caracteres)");
+        alert("Cuéntanos un poco más sobre lo que necesitas (mínimo 10 caracteres).");
         return;
     }
 
-    //si todo se encuentra bien
-    alert("Gracias!, Tu solicirud fue enviada correctamente");
-    formulario.reset();
+    //si todo se encuentra bien enviamos a formspree
+    try {
+        const respuesta = await fetch(formulario.action, {
+            method: "POST",
+            body: new FormData(formulario),
+            headers: { Accept: "application/json" },
+        });
+
+        if (respuesta.ok) {
+            alert("¡gracias! Tu solicitud fue enviada correctamente.")
+            formulario.reset();
+        } else {
+            alert("Hubo un problema al enviar. Intenta de nuevo.")
+        }
+    } catch (error) {
+        alert("Error de conexión. Revisa tu internet e inténtalo nuevamente.")
+    }
 
 });
 
