@@ -215,7 +215,7 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .ubicacion-info h3 {
@@ -231,11 +231,8 @@ nav a {
 .ubicacion-mapa {
   background-color: var(--color-fondo-claro);
   border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 250px;
-  color: var(--color-texto);
+  overflow: hidden;
+  min-height: 400px; /* al menos 400 px de alto*/
 }
 
 /* formulario */
@@ -346,6 +343,12 @@ html {
 /* Pausa al pasar el mouse */
 .carrusel:hover .carrusel-pista {
   animation-play-state: none; /* para activar esa funcion usar : ( paused ) */
+}
+
+@media (min-width: 601px) {
+  .ubicacion-mapa {
+    margin-top: -80px;
+  }
 }
 
 /* Responsive: movil */
