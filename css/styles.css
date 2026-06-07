@@ -305,7 +305,7 @@ html {
 
 /* ===== Carrusel infinito ===== */
 .carrusel {
-  overflow: hidden;       /* oculta lo que se sale de la ventana */
+  overflow: hidden; /* oculta lo que se sale de la ventana */
   margin-top: 2rem;
   width: 100%;
 }
@@ -313,12 +313,12 @@ html {
 .carrusel-pista {
   display: flex;
   gap: 1rem;
-  width: max-content;     /* la pista es tan ancha como sus items */
+  width: max-content; /* la pista es tan ancha como sus items */
   animation: desplazar 25s linear infinite;
 }
 
 .carrusel-item {
-  flex-shrink: 0;         /* las tarjetas no se encogen */
+  flex-shrink: 0; /* las tarjetas no se encogen */
   width: 280px; /* ancho de la tarjeta */
 }
 
@@ -353,7 +353,9 @@ html {
   border: 1px solid #e2e8f0;
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .tarjeta-producto:hover {
@@ -489,7 +491,9 @@ html {
   border-radius: 1.25rem;
   padding: 2.5rem 1.8rem 2rem;
   min-height: 260px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .beneficio:hover {
@@ -562,12 +566,21 @@ html {
   line-height: 1.7;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+  transition:
+    opacity 0.3s ease 0.2s,
+    transform 0.3s ease 0.2s;
 }
 
 .beneficio:hover .beneficio-overlay p {
   opacity: 1;
   transform: translateY(0);
+}
+
+footer p {
+  font-size: 0.94rem;
+}
+footer p:last-child {
+  font-size: 0.75rem;
 }
 
 /* Responsive: movil */
@@ -604,7 +617,10 @@ html {
     overflow: hidden;
     opacity: 0;
     transform: translateY(-6px);
-    transition: max-height 0.35s ease, opacity 0.3s ease, transform 0.3s ease;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
   }
 
   .nav-links.activo {
