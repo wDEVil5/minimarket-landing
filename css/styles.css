@@ -72,7 +72,8 @@ h2 {
 h1,
 h2,
 h3 {
-  font-family: "Poppins" sans-serif; /* Poppins para títulos  [APLICANDO FONT STACK] */
+  font-family:
+    "Poppins", sans-serif; /* Poppins para títulos  [APLICANDO FONT STACK] */
 }
 
 /* enlaces del menu */
@@ -340,10 +341,12 @@ html {
   }
 }
 
-/* Pausa al pasar el mouse */
+/*
+/* Pausa al pasar el mouse
 .carrusel:hover .carrusel-pista {
-  animation-play-state: none; /* para activar esa funcion usar : ( paused ) */
+  animation-play-state: paused; 
 }
+*/
 
 /* Tarjeta de producto ( con imagen y badge )*/
 
@@ -381,10 +384,6 @@ html {
 }
 
 /* El cuerpo de texto */
-.tarjeta-cuerpo {
-  padding: 1.2rem;
-}
-
 .tarjeta-cuerpo h3 {
   color: var(--color-oscuro);
   margin-bottom: 0.5rem;
